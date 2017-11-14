@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 import Journals from './components/Journals'
 import NewJournalform from './components/NewJournalForm'
+import NewPostForm from './components/NewPostForm'
 
 class App extends Component {
   render() {
