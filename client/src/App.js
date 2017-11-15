@@ -19,8 +19,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Journals}/>
             <Route exact path="/journals/:journalId/" component={Journal}/>
-            <Route exact path="/journals/:id/posts/" component={Posts}/>
-            <Route exact path="/journals/:id/posts/postUpdate" component={PostUpdate} />
+            <Route exact path="/journals/:journalId/posts/" component={Posts}/>
+            <Route exact path="/journals/:journalId/posts/postUpdate" component={PostUpdate} />
 
             
           </Switch>

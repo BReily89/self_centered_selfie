@@ -33,7 +33,8 @@ class Journal extends Component {
             <div>
                <div>{this.state.journal.name}</div> 
                <div>{this.state.journal.description}</div>
-               <PostList posts={this.state.posts} />
+               <PostList posts={this.state.posts}
+               journalId={this.state.journal.id} />
               
 
             </div>

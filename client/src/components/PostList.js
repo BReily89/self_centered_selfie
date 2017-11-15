@@ -46,7 +46,7 @@ class PostList extends Component {
                 </Link>
             })} */}
             <button onClick={this.toggleShowNewForm}>New Post</button>
-            {this.state.showNewForm ? <NewPostForm getAllPosts={this.getAllPosts}/> :null}
+            {this.state.showNewForm ? <NewPostForm getAllPosts={this.getAllPosts} journalId={this.props.journalId}/> :null}
             </div>
         )
     }

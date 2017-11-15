@@ -21,12 +21,13 @@ class NewPostForm extends Component {
             photo_url: this.state.photo_url
 
         }
-        await axios.post('/api/posts', payload)
+        const journalId = this.props.journalId
+        await axios.post(`/api/journals/${journalId}/posts`, payload)
         await this.props.getAllPosts()
     }
     render() {
         return (
-            <form onSumbit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
             <div>
                 <label htmlFor='title'>Title: </label>
                 <input onChange={this.handleChange} type='text' name='title' value={this.state.title}/>

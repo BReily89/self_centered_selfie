@@ -12,8 +12,8 @@ class Api::PostsController < ApplicationController
         @journal = Journal.find(params[:journal_id])
         @post = Post.new(post_params)
         
-        journal.posts << @post
-        journal.save!
+        @journal.posts << @post
+        @journal.save!
         render json: @post
     end
     def update
@@ -27,6 +27,6 @@ class Api::PostsController < ApplicationController
     end
     private
     def post_params
-        require(:post).permit(:title, :content, :photo_url)
+        params.require(:post).permit(:title, :content, :photo_url)
     end
 end
