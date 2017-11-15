@@ -19,6 +19,7 @@ class PostList extends Component {
                             <h3>TEST</h3>
                             <h1>{post.title}</h1>
                             <p>{post.content}</p>
+                            <img src={post.photo_url}/>
                         </div>
                     )
                 })}
