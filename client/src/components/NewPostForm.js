@@ -19,6 +19,7 @@ class NewPostForm extends Component {
             title: this.state.title,
             content: this.state.content,
             photo_url: this.state.photo_url
+
         }
         await axios.post('/api/posts', payload)
         await this.props.getAllPosts()
