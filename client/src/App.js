@@ -15,6 +15,8 @@ class App extends Component {
           <h1>Hello</h1>
           <Switch>
             <Route exact path="/" component={Journals}/>
+            <Route exact path="/journals/:journalsId/" component={Journals}/>
+
             
           </Switch>
         </div>

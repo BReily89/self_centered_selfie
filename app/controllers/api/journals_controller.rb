@@ -1,7 +1,7 @@
 class Api::JournalsController < ApplicationController
     def index
-        @Journals = Journal.all 
-        render json: @journals
+        @journals = Journal.first
+        render json: @journals, include: 'posts'
     end
     def create
         journal_params = params.require(:journal).permit(:name, :description)

@@ -8,22 +8,26 @@ class Journals extends Component {
         showNewForm: false
     }
     componentWillMount () {
-        this.getAllJournals()
+                console.log('fuck right the hell off axios')
+
+        // this.getAllJournals()
     }
     getAllJournals = async () => {
-    const res = await axios.get('/api/journals')
-    this.setState({creatures: res.data})
+        const res = await axios.get('/api/journals')
+        this.setState({journals: res.data})
     } 
     toggleShowNewForm = () => {
         this.setState({showNewForm: !this.state.showNewForm})
     }
     render() {
+        console.log(this.state.journals);
         return (
             <div>
             <h1>Journal Entries</h1>
             {this.state.journals.map(journal => (
                 <Link key={journal._id} to={`/${journal._id}`}>
                 <h3>name: {journal.name}</h3>
+                {console.log('here')}
                 <p>Description: {journal.description}</p>
                 </Link>
             ))}
