@@ -16,7 +16,6 @@ class PostList extends Component {
                 {this.props.posts.map((post) => {
                     return (
                         <div>
-                            <h3>TEST</h3>
                             <h1>{post.title}</h1>
                             <p>{post.content}</p>
                             <img src={post.photo_url}/>
