@@ -6,6 +6,7 @@ import './App.css';
 import Journals from './components/Journals'
 import NewJournalform from './components/NewJournalForm'
 import NewPostForm from './components/NewPostForm'
+import Post from './components/Posts'
 
 class App extends Component {
   render() {
