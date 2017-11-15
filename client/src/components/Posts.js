@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import NewPostForm from './NewPostForm'
+import {Redirect} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Journal from './Journal'
+
+
 
 class Posts extends Component {
     state ={
@@ -22,11 +28,15 @@ class Posts extends Component {
     }
 
     render() {
+        <div>
+        
+        </div>
         const journalId = this.props.match.params.journalId
         const postId = this.props.match.params.postId
 
         if (this.state.redirectToJournals){
-            // return <Redirect to={`/journals/${journalId}`} />
+            <NewPostForm posts={this.state.posts} />
+            return <Redirect to={`/journals/${journalId}`} />
         }
         return (
 

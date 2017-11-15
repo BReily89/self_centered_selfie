@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import NewJournalForm from './NewJournalForm'
+import {Redirect} from 'react-router-dom'
+
 class Journals extends Component {
     state = {
         journals: [],
@@ -20,6 +22,7 @@ class Journals extends Component {
         this.setState({showNewForm: !this.state.showNewForm})
     }
     render() {
+
         // console.log(this.state.journals);
         return (
             <div>

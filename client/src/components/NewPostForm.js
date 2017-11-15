@@ -26,7 +26,6 @@ class NewPostForm extends Component {
     }
     render() {
         return (
-    
             <form onSumbit={this.handleSubmit}>
             <div>
                 <label htmlFor='title'>Title: </label>

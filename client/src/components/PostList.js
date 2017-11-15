@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
+import NewPostForm from './NewPostForm'
+
 // import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 // import FlatButton from 'material-ui/FlatButton';
 // import timeago from 'timeago.js'
 
 class PostList extends Component {
+    state = {
+        posts: [],
+        showNewForm: false
+    }
 
     componentWillMount(){
         console.log('mounting')
@@ -22,6 +29,15 @@ class PostList extends Component {
                         </div>
                     )
                 })}
+                    {this.state.posts.map((post) => {
+                <Link key={post.id} to={`/posts/${post.id}`}>
+                <h3>title:{post.title}</h3>
+                <p>content: {post.content}</p>
+                <p>selfie: {post.selfie}</p>
+                </Link>
+            })}
+            <button onClick={this.toggleShowNewForm}>New Post</button>
+            {this.state.showNewForm ? <NewPostForm getAllPosts={this.getAllPosts}/> :null}
             </div>
         )
     }
@@ -29,37 +45,4 @@ class PostList extends Component {
 
 
 export default PostList;
-            // <div>
-            //     {
-            //         posts.map((post) => {
-            //         //    const content = post.content.split(" ").splice(0, 50).join(" ")
-            //         //    const timeAgo = timeago().format(post.created_at)
-            //             return (
-                            
-            //                 <Card key={post.id} style={{
-            //                     margin: "10px",
-            //                     color: "rgba(32.86. 33.14. 33.99, 0.4)"
-            //                 }}>
-            //                     <CardHeader
-            //                     title={post.title}
-            //                     style={{
-            //                         fontWeight: "bold",
-            //                         fontSize: "20px"
-            //                     }}
-            //                     />
-            //                     <CardText>
-            //                         <p>{content}... </p>
-            //                     </CardText>
-            //                     <CardActions>
-            //                         <FlatButton href={`/journals/${this.props.city.id}/posts/${post.id}`}
-            //                             label="View Post" 
-            //                             style={{
-            //                             backgroundColor: "#72E0FF"
-            //                         }}/>
-            //                     </CardActions>
-            //                     <h1>sup</h1>
-            //                 </Card>
-            //             )
-            //         })
-            //     }
-            // </div>
+          
