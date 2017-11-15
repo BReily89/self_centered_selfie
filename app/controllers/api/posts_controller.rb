@@ -1,6 +1,7 @@
 class Api::PostsController < ApplicationController
     def index
-        @posts = Journal.find(params[:journal_id]).post.reverse
+        @posts = Journal.find(params[:journal_id]).posts.reverse
+        puts @posts
         render json: @posts
     end
     def show
@@ -25,6 +26,7 @@ class Api::PostsController < ApplicationController
         render status: :ok
     end
     private
-    def post_params.require(:post).permit(:title, :content, :photo_url)
+    def post_params
+        require(:post).permit(:title, :content, :photo_url)
     end
 end

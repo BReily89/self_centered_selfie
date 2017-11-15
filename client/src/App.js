@@ -6,7 +6,7 @@ import './App.css';
 import Journals from './components/Journals'
 import NewJournalform from './components/NewJournalForm'
 import NewPostForm from './components/NewPostForm'
-import Post from './components/Posts'
+import Posts from './components/Posts'
 import Journal from './components/Journal'
 
 class App extends Component {
@@ -14,10 +14,10 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <h1>Hello</h1>
           <Switch>
             <Route exact path="/" component={Journals}/>
-            <Route exact path="/journals/:journalsId/" component={Journals}/>
+            <Route exact path="/journals/:journalId/" component={Journal}/>
+            <Route exact path="/journals/:id/posts/" component={Posts}/>
 
             
           </Switch>

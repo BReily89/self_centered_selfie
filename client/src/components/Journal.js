@@ -10,28 +10,31 @@ class Journal extends Component {
     }
     async componentWillMount() {
         try {
-            const journalId = this.props.match.params.JournalId
-            const response = await axios.get(`/api/journals/${journalId}`)
-            this.setState({city: response.data})
+            const journalId = this.props.match.params.journalId
+            const response = await axios.get(`/api/journals/${journalId}/posts`)
+  
+            this.setState({posts: response.data})
         }catch (error) {
             console.log(error)
         }
         try {
             const journalId = this.props.match.params.journalId
-            const response = await axios.get(`api/journals/:id${journalId}/posts`)
-            this.setState({posts: response.data})
+            const response = await axios.get(`/api/journals/${journalId}/`)
+
+            this.setState({journal: response.data})
         }catch (error) {
             console.log(error)
         }
+      
     }
     render() {
+        console.log(this.state.posts)
         return (
             <div>
                <div>{this.state.journal.name}</div> 
                <div>{this.state.journal.description}</div>
-               <div>{this.state.journal}</div>
-               <div>{this.state.posts}</div>
-               <div>{this.state.city}</div>
+               <PostList posts={this.state.posts} />
+              
 
             </div>
         );

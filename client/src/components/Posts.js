@@ -29,6 +29,7 @@ class Posts extends Component {
             // return <Redirect to={`/journals/${journalId}`} />
         }
         return (
+
             
             <div>
                 
