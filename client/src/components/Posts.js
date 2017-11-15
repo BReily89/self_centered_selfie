@@ -17,7 +17,8 @@ class Posts extends Component {
         }catch (error){
             console.log(error)
         }
-    console.log(this.prope)
+    console.log(this.props)
+    console.log(this.state)
     }
 
     render() {
