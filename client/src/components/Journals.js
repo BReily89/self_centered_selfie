@@ -25,7 +25,7 @@ class Journals extends Component {
             <div>
             <h1>Journal Entries</h1>
             {this.state.journals.map((journal) => (
-                <Link key={journal.id} to={`/${journal.id}`}>
+                <Link key={journal.id} to={`/journals/${journal.id}`}>
                 <h3>Name: {journal.name}</h3>
                 <p>Description: {journal.description}</p>
                 </Link>

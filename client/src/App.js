@@ -7,6 +7,7 @@ import Journals from './components/Journals'
 import NewJournalform from './components/NewJournalForm'
 import NewPostForm from './components/NewPostForm'
 import Post from './components/Posts'
+import Journal from './components/Journal'
 
 class App extends Component {
   render() {

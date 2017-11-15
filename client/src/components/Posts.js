@@ -22,7 +22,14 @@ class Posts extends Component {
     }
 
     render() {
+        const journalId = this.props.match.params.journalId
+        const postId = this.props.match.params.postId
+
+        if (this.state.redirectToJournals){
+            // return <Redirect to={`/journals/${journalId}`} />
+        }
         return (
+            
             <div>
                 
             </div>
