@@ -1,6 +1,6 @@
 class Api::JournalsController < ApplicationController
     def index
-        @journals = Journal.first
+        @journals = Journal.all
         render json: @journals, include: 'posts'
     end
     def create
