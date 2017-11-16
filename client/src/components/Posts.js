@@ -66,7 +66,6 @@ class Posts extends Component {
             <FlatButton href={`/journals/${journalId}`}label="Go back to Journal entries" />
             </CardActions>
             </Card>
-            // <Redirect to={`/journals/${journalId}`} /> 
             )
         }
     }
