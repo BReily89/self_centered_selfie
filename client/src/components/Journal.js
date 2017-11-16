@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import PostList from './PostList'
+import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+
 
 class Journal extends Component {
     state = {

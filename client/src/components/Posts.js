@@ -11,7 +11,7 @@ import timeago from 'timeago.js'
 
 
 class Posts extends Component {
-    state ={
+    state = {
         posts: {},
         redirectToJournals: false
     }
@@ -61,7 +61,7 @@ class Posts extends Component {
             <FlatButton href={`/journals/${journalId}`}label="Go back to Journal entries" />
             </CardActions>
             </Card>
-            //  {/* <Redirect to={`/journals/${journalId}`} /> */}
+            // <Redirect to={`/journals/${journalId}`} /> 
             )
         }
     }

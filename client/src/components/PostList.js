@@ -38,13 +38,13 @@ class PostList extends Component {
                         </div>
                     )
                 })}
-                    {/* {this.state.posts.map((post) => {
+                    {this.state.posts.map((post) => {
                 <Link key={post.id} to={`/posts/${post.id}`}>
                 <h3>title:{post.title}</h3>
                 <p>content: {post.content}</p>
                 <p>selfie: {post.selfie}</p>
                 </Link>
-            })} */}
+            })}
             <button onClick={this.toggleShowNewForm}>New Post</button>
             {this.state.showNewForm ? <NewPostForm getAllPosts={this.getAllPosts} journalId={this.props.journalId}/> :null}
             </div>
