@@ -68,8 +68,7 @@ class PostList extends Component {
                             <p>{post.emotion}</p>
                             <div>
                             <FlatButton onClick={() => this.deletePost(post.id)} label="Delete this post" />
-                            {/* <FlatButton onClick={() => this.PostUpdate(post.id)} label="Edit this post" /> */}
-                            <button><Link to={`/journals/${this.props.journalId}/posts/${post.id}`}>Edit this post</Link></button>
+                            <FlatButton href={`/journals/${this.props.journalId}/posts/${post.id}`}label="Edit this post"/>
 
                             </div>
                         </div>
