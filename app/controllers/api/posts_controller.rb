@@ -22,8 +22,11 @@ class Api::PostsController < ApplicationController
         render json: @post
     end
     def destroy 
-        @post = Post.find(params[:id]).delete
-        render status: :ok
+        @post = Post.find(params[:id]).destroy
+        @posts = Journal.find(params[:journal_id]).posts.reverse
+        puts @posts
+        render json: @posts
+        # render status: :ok
     end
     private
     def post_params

@@ -10,6 +10,10 @@ class Journal extends Component {
         posts: []
     }
     async componentWillMount() {
+        this.getPosts()
+        this.getJournal()
+    }   
+    getPosts = async () => {
         try {
             const journalId = this.props.match.params.journalId
             const response = await axios.get(`/api/journals/${journalId}/posts`)
@@ -18,6 +22,8 @@ class Journal extends Component {
         }catch (error) {
             console.log(error)
         }
+    }
+    getJournal = async () => {
         try {
             const journalId = this.props.match.params.journalId
             const response = await axios.get(`/api/journals/${journalId}/`)
@@ -25,16 +31,17 @@ class Journal extends Component {
             this.setState({journal: response.data})
         }catch (error) {
             console.log(error)
-        }
-      
+        } 
     }
+
     render() {
         console.log(this.state.posts)
         return (
             <div>
                <div>{this.state.journal.name}</div> 
                <div>{this.state.journal.description}</div>
-               <PostList posts={this.state.posts}
+               <PostList getPosts={this.getPosts} journalId={this.props.match.params.journalId}
+               posts={this.state.posts}
                journalId={this.state.journal.id} />
               
 

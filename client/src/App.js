@@ -12,7 +12,7 @@ import PostUpdate from './components/PostUpdate'
 
 class App extends Component {
   render() {
-    return (
+    return ( <MuiThemeProvider>
       <Router>
         <div>
           <Switch>
@@ -25,6 +25,7 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
+      </MuiThemeProvider>
     );
   }
 }

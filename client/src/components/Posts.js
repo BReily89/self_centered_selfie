@@ -15,6 +15,12 @@ class Posts extends Component {
         posts: {},
         redirectToJournals: false
     }
+    handleChange = (event) => {
+        const name =event.target.name
+        const newState = {...this.state}
+        newState[name] = event.target.value
+        this.setState(newState)
+    }
     async componentWillMount() {
         try{
             const journalId = this.props.match.params.journalId
@@ -34,7 +40,7 @@ class Posts extends Component {
             const journalId = this.props.match.params.journalId
             const postId = this.props.match.params.postId
             const res = await axios.delete(`/api/journals/${journalId}/posts/${postId}`)
-            this.setState({post: res.data, redirectToJournal: true})
+            this.setState({post: res.data, redirectToJournals: true})
         }
     }
     render() {
@@ -55,8 +61,7 @@ class Posts extends Component {
             <CardActions>
             <NewPostForm posts={this.state.posts} />
             return <Redirect to={`/journals/${journalId}`} />
-            <FlatButton
-            onClick={() => {this.deletePost()}}label="Delete this post" />
+            <FlatButton onClick={() => {this.deletePost()}}label="Delete this post" />
             <FlatButton href={`{journals/${journalId}/posts/${postId}/edit`}label="Edit Post" />
             <FlatButton href={`/journals/${journalId}`}label="Go back to Journal entries" />
             </CardActions>

@@ -23,7 +23,7 @@ class NewPostForm extends Component {
         }
         const journalId = this.props.journalId
         await axios.post(`/api/journals/${journalId}/posts`, payload)
-        await this.props.getAllPosts()
+        await this.props.getPosts()
     }
     render() {
         return (
