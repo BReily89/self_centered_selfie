@@ -50,17 +50,7 @@ class PostList extends Component {
                     )
                 })}
                 
-                   {/* {this.state.posts.map((post) => {
-                        <div>
-                <Link key={post.id} to={`/posts/${post.id}`}>
-                <h3>title:{post.title}</h3>
-                <p>content: {post.content}</p>
-                <p>selfie: {post.selfie}</p>
-                </Link>
-                 <FlatButton onClick={() => {this.deletePost()}} label="Delete this post"> Delete Post </FlatButton>
-                 </div>
-                            
-            })}  */}
+
             <FlatButton onClick={this.toggleShowNewForm}>New Post</FlatButton>
             {this.state.showNewForm ? <NewPostForm getPosts={this.props.getPosts} journalId={this.props.journalId}/> :null}
             </div>
