@@ -48,7 +48,7 @@ class Posts extends Component {
             <Card>
                 <CardHeader
                 title={this.state.posp.title}
-                suntitle={timeago}
+                subtitle={timeago}
                  />
                  <CardText expandable={false}>
                  {this.state.posts.content}

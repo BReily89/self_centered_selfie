@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import PostList from './PostList'
-import Posts from './Posts'
 
 class Journal extends Component {
     state = {
