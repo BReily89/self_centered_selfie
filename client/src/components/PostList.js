@@ -26,11 +26,7 @@ class PostList extends Component {
         const id = postId
         console.log(id)
         const updatedPost = {...this.state.post}
-        const res = await axios.patch(`/api/posts/${postId}`,{
-        })
-        this.setState({
-            post: res.data
-        })
+        const res = await axios.patch(`/api/posts/${id}`,{})
     }
     handleSubmit = async (event) => {
         event.preventDefault()
@@ -72,7 +68,7 @@ class PostList extends Component {
                             <div>
                             <FlatButton onClick={() => this.deletePost(post.id)} label="Delete this post" />
                             {/* <FlatButton onClick={() => this.PostUpdate(post.id)} label="Edit this post" /> */}
-                            <button><Link to={`/journals/${this.state.journalId}/posts/${post.id}`}>Edit this shit yo</Link></button>
+                            <button><Link to={`/journals/${this.props.journalId}/posts/${post.id}`}>Edit this shit yo</Link></button>
 
                             </div>
                         </div>

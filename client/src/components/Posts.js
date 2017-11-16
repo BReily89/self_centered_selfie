@@ -52,7 +52,7 @@ class Posts extends Component {
             
             <Card>
                 <CardHeader
-                title={this.state.posp.title}
+                title={this.state.post.title}
                 subtitle={timeago}
                  />
                  <CardText expandable={false}>

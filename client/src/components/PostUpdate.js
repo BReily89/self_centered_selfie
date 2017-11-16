@@ -25,14 +25,14 @@ handleChange = (event, postId) => {
     console.log(this.state.post)
 }
 updatePost = async (event) => {
+    event.preventDefault()
     try {
-        event.preventDefault()
         const { journalId } = this.props.match.params
-        const { postId } = this.props.match.params
+        const { id } = this.props.match.params
         const clonedPost = { ...this.state.post }
         console.log('here')
-        const res = await axios.patch(`/api/journals/${journalId}/posts/${postId}`, {
-
+        const res = await axios.patch(`/api/journals/${journalId}/posts/${id}`, {
+            post: this.state.post
         })
         console.log(res.data)
         this.setState({ journal: res.data , redirectToPost: true })
@@ -47,17 +47,21 @@ updatePost = async (event) => {
                  <h1>Edit Post</h1>
                <form onSubmit={this.updatePost}>
                <div>
-                   <label htmlFor="title">Post Title</label>
+                   <label htmlFor="title">Date</label>
 
                    <TextField onChange={this.handleChange} name="title"
                    type="text" value={this.state.post.title} />
                </div>
                <div> 
-                   <label htmlFor="content"></label>
+                   <label htmlFor="content">Moods</label>
                    <textarea 
-                    onClick={this.handleChange} name="content"
+                    onChange={this.handleChange} name="content"
                     type="text" value={this.state.post.content} />
                     <button>Edit</button>
+               </div>
+               <div>
+                   <label htmlFor="photo_url">add a seflie</label>
+                  <input onChange={this.handleChange} type='text'name='photo_url' value={this.state.photo_url}/>
                </div>
                </form>
            </div>
