@@ -33,6 +33,16 @@ sad = Journal.new({
             title: " Oh the angst",
             content: "yup",
             photo_url: "http://fillmurray.com/200/200",
+                emotion: [
+                    Emotion.create!({
+                        "anger": 0.037,
+                        "contempt": 0.001,
+                        "disgust": 0.015,
+                        "neutral": 0.001,
+                        "sadness": 0.0,
+                    })
+                   
+            ]
         })]
 })
 sad.save

@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114183349) do
+ActiveRecord::Schema.define(version: 20171116215345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "emotions", force: :cascade do |t|
+    t.float "anger"
+    t.float "contempt"
+    t.float "disgust"
+    t.float "sadness"
+    t.float "neutral"
+    t.float "suprise"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "journals", force: :cascade do |t|
     t.string "name"
@@ -29,8 +40,11 @@ ActiveRecord::Schema.define(version: 20171114183349) do
     t.bigint "journal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "emotions_id"
+    t.index ["emotions_id"], name: "index_posts_on_emotions_id"
     t.index ["journal_id"], name: "index_posts_on_journal_id"
   end
 
+  add_foreign_key "posts", "emotions", column: "emotions_id"
   add_foreign_key "posts", "journals"
 end

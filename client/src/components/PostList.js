@@ -65,10 +65,11 @@ class PostList extends Component {
                             <h1>{post.title}</h1>
                             <p>{post.content}</p>
                             <img src={post.photo_url}/>
+                            <p>{post.emotion}</p>
                             <div>
                             <FlatButton onClick={() => this.deletePost(post.id)} label="Delete this post" />
                             {/* <FlatButton onClick={() => this.PostUpdate(post.id)} label="Edit this post" /> */}
-                            <button><Link to={`/journals/${this.props.journalId}/posts/${post.id}`}>Edit this shit yo</Link></button>
+                            <button><Link to={`/journals/${this.props.journalId}/posts/${post.id}`}>Edit this post</Link></button>
 
                             </div>
                         </div>

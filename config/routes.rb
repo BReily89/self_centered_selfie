@@ -1,7 +1,25 @@
 Rails.application.routes.draw do
   namespace :api do
+    get 'emotion/show'
+  end
+
+  namespace :api do
+    get 'emotion/create'
+  end
+
+  namespace :api do
+    get 'emotion/update'
+  end
+
+  namespace :api do
+    get 'emotion/delete'
+  end
+
+  namespace :api do
     resources :journals do
-      resources :posts
+      resources :posts do
+        resources :emotion
+      end
     end
   end
 end
