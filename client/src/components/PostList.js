@@ -12,13 +12,40 @@ import FlatButton from 'material-ui/FlatButton'
 class PostList extends Component {
     state = {
         posts: [],
-        showNewForm: false
+        journalId: 0,
+        showNewForm: false,
     }
-
-    componentWillMount(){
+    handleChange = (event, postId) => {
+        const name = event.target.name
+        const newState = {...this.state}
+        newState[name] = event.target.value
+        this.setState({posts:newState})
+    
+    }
+    updatedPost = async (postId) => {
+        const id = postId
+        console.log(id)
+        const updatedPost = {...this.state.post}
+        const res = await axios.patch(`/api/posts/${postId}`,{
+        })
+        this.setState({
+            post: res.data
+        })
+    }
+    handleSubmit = async (event) => {
+        event.preventDefault()
+        const payload = {
+            title: this.state.title,
+            content: this.state.content,
+            photo_url: this.state.photo_url
+        }
+    }
+    componentWillMount() {
         console.log('mounting')
         console.log(this.props.posts)
+        console.log(this.props.journalId)
     }
+
     // getAllPosts = async () => {
     //     const res = await axios.get(`/api/posts`)
     //     console.log(res)
@@ -28,13 +55,10 @@ class PostList extends Component {
         this.setState({showNewForm: !this.state.showNewForm})
     }
     deletePost = async (id) => {
-        // if(window.confirm(`are you sure?${this.state.post.title}?`)) {
             const journalId = this.props.journalId
-            // const postId = this.props.match.params.postId
             const res = await axios.delete(`/api/journals/${journalId}/posts/${id}`)
             console.log(res.data)
             this.props.getPosts()
-        // }
     }
     render() {
         return (
@@ -45,7 +69,12 @@ class PostList extends Component {
                             <h1>{post.title}</h1>
                             <p>{post.content}</p>
                             <img src={post.photo_url}/>
+                            <div>
                             <FlatButton onClick={() => this.deletePost(post.id)} label="Delete this post" />
+                            {/* <FlatButton onClick={() => this.PostUpdate(post.id)} label="Edit this post" /> */}
+                            <button><Link to={`/journals/${this.state.journalId}/posts/${post.id}`}>Edit this shit yo</Link></button>
+
+                            </div>
                         </div>
                     )
                 })}

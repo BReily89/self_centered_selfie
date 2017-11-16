@@ -47,7 +47,7 @@ updatePost = async (event) => {
                  <h1>Edit Post</h1>
                <form onSubmit={this.updatePost}>
                <div>
-                   <lable htmlFor="title">Post Title</lable>
+                   <label htmlFor="title">Post Title</label>
 
                    <TextField onChange={this.handleChange} name="title"
                    type="text" value={this.state.post.title} />
@@ -55,8 +55,9 @@ updatePost = async (event) => {
                <div> 
                    <label htmlFor="content"></label>
                    <textarea 
-                    onChange={this.handleChange} name="content"
+                    onClick={this.handleChange} name="content"
                     type="text" value={this.state.post.content} />
+                    <button>Edit</button>
                </div>
                </form>
            </div>

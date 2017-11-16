@@ -42,6 +42,7 @@ class NewPostForm extends Component {
                 </div>
                 <button>Save</button>
                 </form>
+                
         );
     }
 }

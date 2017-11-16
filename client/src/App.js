@@ -19,7 +19,7 @@ class App extends Component {
             <Route exact path="/" component={Journals}/>
             <Route exact path="/journals/:journalId/" component={Journal}/>
             <Route exact path="/journals/:journalId/posts/" component={Posts}/>
-            <Route exact path="/journals/:journalId/posts/postUpdate" component={PostUpdate} />
+            <Route exact path="/journals/:journalId/posts/:id" component={PostUpdate} />
 
             
           </Switch>

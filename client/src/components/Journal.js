@@ -42,7 +42,8 @@ class Journal extends Component {
                <div>{this.state.journal.description}</div>
                <PostList getPosts={this.getPosts} journalId={this.props.match.params.journalId}
                posts={this.state.posts}
-               journalId={this.state.journal.id} />
+               //journalId={this.state.journal.id}
+                />
               
 
             </div>
