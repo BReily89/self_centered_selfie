@@ -35,7 +35,7 @@ updatePost = async (event) => {
 
         })
         console.log(res.data)
-        this.setState({ city: res.data , redirectToPost: true })
+        this.setState({ journal: res.data , redirectToPost: true })
     }catch (error) {
     }
 }
@@ -44,6 +44,7 @@ updatePost = async (event) => {
         const { postId } = this.props.match.params
         return (
            <div>
+                 <h1>Edit Post</h1>
                <form onSubmit={this.updatePost}>
                <div>
                    <lable htmlFor="title">Post Title</lable>
