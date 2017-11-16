@@ -4,7 +4,6 @@ import FlatButton from 'material-ui/FlatButton';
 import NewPostForm from './NewPostForm'
 import {Redirect} from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Journal from './Journal'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import timeago from 'timeago.js'
 
@@ -63,20 +62,8 @@ class Posts extends Component {
             <FlatButton href={`/journals/${journalId}`}label="Go back to Journal entries" />
             </CardActions>
             </Card>
-               
-                // }
-
-           
-            {/* <Redirect to={`/journals/${journalId}`} /> */}
-
-
+             {/* <Redirect to={`/journals/${journalId}`} /> */}
         }
-        // return (
-
-            
-                
-        ;
     }
 }
-
 export default Posts;
