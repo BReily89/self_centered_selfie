@@ -34,7 +34,6 @@ class Journals extends Component {
     render() {
          
 
-        // console.log(this.state.journals);
         return (
             <JournalWrapper>
             <div>

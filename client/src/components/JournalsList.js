@@ -3,11 +3,12 @@ import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 import styled from 'styled-components'
 
-const Card = styled.div`
+const Container = styled.div`
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0   6px 20px 0 rgba(0, 0, 0, 0.19);
 padding-top: 5px;
 padding-bottom: 10px;
 background-color: white;
+text-align: center;
 `
 class JournalsList extends Component {
     
@@ -33,16 +34,16 @@ class JournalsList extends Component {
                         </CardText>
                         <FlatButton href={`/journals/${journal.id}`}
                         label={`view posts for ${journal.name}`}
-                        
+                    
                         style={{backgroundColor: "720FF",
                         margin: "5px"}}/>
-                        </div>
-                        </Container>
-                    
+                        </Card>
+                        // </div>
                     })
                 }
                 </div>  
                 </Container>
+                
         );
     }
 }

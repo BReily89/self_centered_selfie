@@ -3,13 +3,13 @@ import TextField from "material-ui/TextField"
 import styled from 'styled-components'
 import axios from 'axios'
 
-const updatePostStyle = styled.div`
-display: flex;
-flex-direction: column;
-display: flex;
-margin: 0.5rem;
-padding: 1rem;
-`
+// const updatePostStyle = styled.div`
+// display: flex;
+// flex-direction: column;
+// display: flex;
+// margin: 0.5rem;
+// padding: 1rem;
+// `
 class PostUpdate extends Component {
     state = {
         post: {},
@@ -64,10 +64,10 @@ updatePost = async (event) => {
                    <textarea 
                     onChange={this.handleChange} name="content"
                     type="text" value={this.state.post.content} />
-                    <button>Edit</button>
+                    <button>Save</button>
                </div>
                <div>
-                   <label htmlFor="photo_urlexit">Change your seflie</label>
+                   <label htmlFor="photo_url">Change your seflie</label>
                   <input onChange={this.handleChange} type='text'name='photo_url' value={this.state.photo_url}/>
                </div>
                </form>
