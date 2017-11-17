@@ -36,7 +36,6 @@ class Journals extends Component {
             {this.state.showNewForm ? <NewJournalForm getAllJournals={this.getAllJournals}/> : null}
             <div>
                 </div>
-                
             </div>
         )
     }

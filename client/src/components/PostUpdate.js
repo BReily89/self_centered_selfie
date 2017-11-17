@@ -60,7 +60,7 @@ updatePost = async (event) => {
                     <button>Edit</button>
                </div>
                <div>
-                   <label htmlFor="photo_url">add a seflie</label>
+                   <label htmlFor="photo_url">Change your seflie</label>
                   <input onChange={this.handleChange} type='text'name='photo_url' value={this.state.photo_url}/>
                </div>
                </form>

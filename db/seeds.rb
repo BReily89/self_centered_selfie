@@ -1,5 +1,6 @@
 Journal.destroy_all
 Post.destroy_all
+# Emotion.destroy_all
 happy = Journal.new({
     name: "A happy day",
     description: "Today, I feel happy, heres a photo to prove it",
@@ -18,6 +19,15 @@ happy = Journal.new({
             title:"I dont like today",
             content: "gross",
             photo_url: "http://fillmurray.com/200/200",
+                # emotion: [
+                #     Emotion.create!({
+                #         "anger": 0.0,
+                #         "contempt": 0.0,
+                #         "disgust": 0.0,
+                #         "neutral": 0.0,
+                #         "sadness": 0.0,
+                #     })
+                # ]
         })]
 })
 happy.save
@@ -33,16 +43,20 @@ sad = Journal.new({
             title: " Oh the angst",
             content: "yup",
             photo_url: "http://fillmurray.com/200/200",
-                emotion: [
-                    Emotion.create!({
-                        "anger": 0.037,
-                        "contempt": 0.001,
-                        "disgust": 0.015,
-                        "neutral": 0.001,
-                        "sadness": 0.0,
-                    })
-                   
-            ]
+        #         emotion: [
+        #             Emotion.create!({
+        #                 "anger": 0.037,
+        #                 "contempt": 0.001,
+        #                 "disgust": 0.015,
+        #                 "neutral": 0.001,
+        #                 "sadness": 0.0,
+
+        #             }) 
+        #     ]
         })]
 })
 sad.save
+
+
+# ± |master → origin ✓| → rails g modeel Emotion anger:float contempt:float disgust:float sadness:float neutral:float neutral:float suprise:float
+# ± |master → origin U:2 ?:3 ✗| → rails g migration AddEmotionsToPosts emotions:references

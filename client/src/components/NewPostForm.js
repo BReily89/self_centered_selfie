@@ -43,6 +43,7 @@ class NewPostForm extends Component {
                 <button>Save</button>
                 </form>
                 
+                
         );
     }
 }

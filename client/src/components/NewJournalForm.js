@@ -6,6 +6,7 @@ class NewJournalForm extends Component {
             name: '',
             description: ''
         }
+        
     handleChange = (event) => {
         const name = event.target.name
         const newState = {...this.state}
