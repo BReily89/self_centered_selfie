@@ -1,32 +1,34 @@
 Journal.destroy_all
 Post.destroy_all
-# Emotion.destroy_all
-happy = Journal.new({
+happy = Journal.create!({
     name: "A happy day",
     description: "Today, I feel happy, heres a photo to prove it",
-    posts: [
- happyPost1 = Post.create({
+})
+ happyPost1 = Post.create!({
             title: "look at how happy I look",
             content: "tehee",
             photo_url: "http://fillmurray.com/200/200",
+            journal: happy
         })
-happyPos1tEmotion = Emotion.create({
-        anger: 0,
-        contempt: 0,
-        disgust: 0,
-        fear: 0,
-        happiness: .87,
+happyPost1Emotion = Emotion.create!({
+        anger: 0.0,
+        contempt: 0.0,
+        disgust: 0.0,
+        fear: 0.0,
+        happiness: 0.87,
         neutral: 0.06,
         sadness: 0.0,
-        surprise: 0.005,
+        suprise: 0.005,
         post: happyPost1
     })
 
-     HappyPost2= Post.create({
+HappyPost2= Post.create!({
             title:"This one is not so much",
             content: "whoa",
             photo_url:"http://fillmurray.com/200/200",
- happyPos2tEmotion = Emotion.create!({
+            journal: happy
+})
+happyPost2Emotion = Emotion.create!({
                 anger: 0,
                 contempt: 0,
                 disgust: 0,
@@ -34,34 +36,25 @@ happyPos1tEmotion = Emotion.create({
                 happiness: 0,
                 neutral: 0.986,
                 sadness: 0.89,
-                surprise: 0.005,
-                post: happyPost2
-            })
+                suprise: 0.005,
+                post: HappyPost2
         })
-    
-        Post.create({
+happyPost = Post.create({
             title:"I dont like today",
             content: "gross",
             photo_url: "http://fillmurray.com/200/200",
-                # emotion: [
-                #     Emotion.create!({
-                #         "anger": 0.0,
-                #         "contempt": 0.0,
-                #         "disgust": 0.0,
-                #         "neutral": 0.0,
-                #         "sadness": 0.0,
-                #     })
-                # ]
-                # "emotion": {
-                #     "anger": 0,
-                #     "contempt": 0,
-                #     "disgust": 0,
-                #     "fear": 0,
-                #     "happiness": 0,
-                #     "neutral": 0.986,
-                #     "sadness": 0.009,
-                #     "surprise": 0.005
-        })]
+            journal: happy
+    })
+ happyPostEmotion = Emotion.create!({
+                    anger: 0.0,
+                    contempt:0.0,
+                    disgust: 0.0,
+                    fear: 0.0,
+                    happiness: 0.0,
+                    neutral: 0.986,
+                    sadness: 0.009,
+                    suprise: 0.005,
+                    post: happyPost
 })
 happy.save
 sad = Journal.create!({
@@ -69,7 +62,7 @@ sad = Journal.create!({
      description: " bohoo",
     })
 sadPost1 = Post.create!({
-             title: " look how sad I be",
+             title: " look how sdad I be",
              content: "tears",
              photo_url: "http://fillmurray.com/200/200",
              journal: sad
@@ -82,7 +75,7 @@ sadPost1Emotion = Emotion.create!({
                     happiness: 0,
                     neutral: 0.986,
                     sadness: 0.89,
-                    surprise: 0.005,
+                    suprise: 0.005,
                     post: sadPost1
 })
 sadPost2 = Post.create!({
@@ -90,7 +83,7 @@ sadPost2 = Post.create!({
             content: "yup",
             photo_url: "http://fillmurray.com/200/200",
             journal: sad
-        })
+ })
 sadPost2Emotion = Emotion.create!({
             anger: 0.037,
             contempt: 0.001,

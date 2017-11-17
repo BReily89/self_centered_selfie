@@ -6,10 +6,6 @@ import {Redirect} from 'react-router-dom'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
 import timeago from 'timeago.js'
 
-
-
-
-
 class Posts extends Component {
     state = {
         posts: {},
@@ -25,6 +21,7 @@ class Posts extends Component {
         try{
             const journalId = this.props.match.params.journalId
             const postsId = this.props.match.params.postsId
+            const emotionId = this.props.match.params.emotionId
 
             const response = await axios.get(`/api/journals${journalId}/posts/${postsId}`)
             console.table(response.data)
@@ -57,6 +54,7 @@ class Posts extends Component {
                  />
                  <CardText expandable={false}>
                  {this.state.posts.content}
+                 {this.state.emotions}
                  </CardText>
             <CardActions>
             <NewPostForm posts={this.state.posts} />
