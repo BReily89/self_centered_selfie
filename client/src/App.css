@@ -8,8 +8,8 @@ a{
 h1{
   font-family: 'Spectral SC';
   margin: auto;
-  text-shadow: 1px 1px #72E0FF;
-  color: #747578
+  text-shadow: 1px 1px rgb(243, 243, 243);
+  color: #8aff90
 }
 textarea{
   background: transparent;
