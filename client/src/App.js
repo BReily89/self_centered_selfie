@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import "./App.css";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Journals from './components/Journals'
 import NewJournalform from './components/NewJournalForm'
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return ( <MuiThemeProvider>
       <Router>
+        <div classname ="App">
         <div>
           <Switch>
             <Route exact path="/" component={Journals}/>
@@ -23,6 +25,7 @@ class App extends Component {
 
             
           </Switch>
+          </div>
         </div>
       </Router>
       </MuiThemeProvider>
