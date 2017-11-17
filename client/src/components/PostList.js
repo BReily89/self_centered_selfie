@@ -3,13 +3,26 @@ import { Link } from 'react-router-dom'
 import NewPostForm from './NewPostForm'
 import axios from  'axios'
 import FlatButton from 'material-ui/FlatButton'
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import styled from 'styled-components'
+
+const TextWrapper = styled.div`
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0   6px 20px 0 rgba(0, 0, 0, 0.19);
+padding-top: 5px;
+padding-bottom: 30px;
+align-content: center;
+`
 
 
 // import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
-// import FlatButton from 'material-ui/FlatButton';
 // import timeago from 'timeago.js'
 
+const PostListStyle = styled.div`
+display: flex;
+margin: 0.5rem;
+padding: 1rem;
+align:center;
+`
 class PostList extends Component {
     state = {
         posts: [],
@@ -63,7 +76,7 @@ class PostList extends Component {
             <div>
                 {this.props.posts.map((post) => {
                     return (
-                        <div>
+                        <TextWrapper>
                             <h1>{post.title}</h1>
                             <p>{post.content}</p>
                             <img src={post.photo_url}/>
@@ -74,7 +87,7 @@ class PostList extends Component {
                             <FlatButton href={`/journals/${this.props.journalId}/posts/${post.id}`}label="Edit this post"/>
 
                             </div>
-                        </div>
+                        </TextWrapper>
                     )
                 })}
                 
@@ -85,5 +98,6 @@ class PostList extends Component {
         )
     }
 }
+
 export default PostList;
           

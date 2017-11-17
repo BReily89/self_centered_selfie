@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import styled from 'styled-components'
+
+const New = styled.div`
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0   6px 20px 0 rgba(0, 0, 0, 0.19);
+padding-top: 5px;
+padding-bottom: 10px;
+background-color: white;`
 
 class NewJournalForm extends Component {
         state = {
@@ -24,6 +31,7 @@ class NewJournalForm extends Component {
     }
     render() {
         return (
+            <New>
             <form onSubmit={this.handleSumbit}>
             <div>
             <label htmlFor='name'>Name:</label>
@@ -35,6 +43,7 @@ class NewJournalForm extends Component {
             </div>
             <button>Save</button>
             </form>
+            </New>
         );
     }
 }

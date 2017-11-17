@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import styled from 'styled-components'
+
+const NewPostForms = styled.div`
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0   6px 20px 0 rgba(0, 0, 0, 0.19);
+padding-top: 5px;
+padding-bottom: 10px;
+background-color: white;`
 
 class NewPostForm extends Component {
     state = {
@@ -27,6 +34,7 @@ class NewPostForm extends Component {
     }
     render() {
         return (
+            <NewPostForms>
             <form onSubmit={this.handleSubmit}>
             <div>
                 <label htmlFor='title'>Title: </label>
@@ -42,6 +50,7 @@ class NewPostForm extends Component {
                 </div>
                 <button>Save</button>
                 </form>
+                </NewPostForms>
                 
                 
         );

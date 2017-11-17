@@ -3,13 +3,13 @@ body {
 }
 a{
   color: #fcfcfd;
-  text-shadow: 1px 1px #e0afd8;
+  text-shadow: 1px 1px #a80f91;
 }
 h1{
   font-family: 'Spectral SC';
   margin: auto;
-  text-shadow: 1px 1px rgb(243, 243, 243);
-  color: #8aff90
+  text-shadow: 1px 1px rgb(196, 13, 13);
+  color: #430146 
 }
 textarea{
   background: transparent;
@@ -26,8 +26,8 @@ label{
   margin: auto;
   text-shadow: 1px 1px rgb(243, 243, 243);
   color: #8aff90
-
 }
+
 /* .App {
   text-align: center;
 }

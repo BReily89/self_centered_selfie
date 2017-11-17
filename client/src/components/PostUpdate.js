@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import TextField from "material-ui/TextField"
-
+import styled from 'styled-components'
 import axios from 'axios'
 
+const updatePostStyle = styled.div`
+display: flex;
+flex-direction: column;
+display: flex;
+margin: 0.5rem;
+padding: 1rem;
+`
 class PostUpdate extends Component {
     state = {
         post: {},
@@ -43,7 +50,7 @@ updatePost = async (event) => {
         const { journalId } = this.props.match.params
         const { postId } = this.props.match.params
         return (
-           <div>
+           <updatePostStyle>
                  <h1>Edit Post</h1>
                <form onSubmit={this.updatePost}>
                <div>
@@ -64,7 +71,7 @@ updatePost = async (event) => {
                   <input onChange={this.handleChange} type='text'name='photo_url' value={this.state.photo_url}/>
                </div>
                </form>
-           </div>
+           </updatePostStyle>
                 
         );
     }

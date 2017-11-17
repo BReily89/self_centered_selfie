@@ -4,11 +4,13 @@ import FlatButton from 'material-ui/FlatButton';
 import NewPostForm from './NewPostForm'
 import {Redirect} from 'react-router-dom'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
+import styled from 'styled-components'
 import timeago from 'timeago.js'
 
 class Posts extends Component {
     state = {
         posts: {},
+        emotion:{},
         redirectToJournals: false
     }
     handleChange = (event) => {
@@ -43,6 +45,7 @@ class Posts extends Component {
     render() {
         const journalId = this.props.match.params.journalId
         const postId = this.props.match.params.postId
+        const emotionId = this.props.match.prarams.emotionId
 
         if (this.state.redirectToJournals){
             return (

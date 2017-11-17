@@ -7,7 +7,7 @@ happy = Journal.create!({
  happyPost1 = Post.create!({
             title: "look at how happy I look",
             content: "tehee",
-            photo_url: "http://fillmurray.com/200/200",
+            photo_url: "https://i.imgur.com/CjpwABr.jpg",
             journal: happy
         })
 happyPost1Emotion = Emotion.create!({
@@ -23,9 +23,9 @@ happyPost1Emotion = Emotion.create!({
     })
 
 HappyPost2= Post.create!({
-            title:"This one is not so much",
-            content: "whoa",
-            photo_url:"http://fillmurray.com/200/200",
+            title:"Feeling ALIVE",
+            content: "like breathing and stuff",
+            photo_url:"https://i.imgur.com/bAr421N.jpg?1",
             journal: happy
 })
 happyPost2Emotion = Emotion.create!({
@@ -40,9 +40,9 @@ happyPost2Emotion = Emotion.create!({
                 post: HappyPost2
         })
 happyPost = Post.create({
-            title:"I dont like today",
-            content: "gross",
-            photo_url: "http://fillmurray.com/200/200",
+            title:"I like today",
+            content: "look at lil ole me",
+            photo_url: "https://i.imgur.com/OgRZb5L.jpg",
             journal: happy
     })
  happyPostEmotion = Emotion.create!({
@@ -62,7 +62,7 @@ sad = Journal.create!({
      description: " bohoo",
     })
 sadPost1 = Post.create!({
-             title: " look how sdad I be",
+             title: " look how sad I be",
              content: "tears",
              photo_url: "http://fillmurray.com/200/200",
              journal: sad
@@ -81,7 +81,7 @@ sadPost1Emotion = Emotion.create!({
 sadPost2 = Post.create!({
             title: " Oh the angst",
             content: "yup",
-            photo_url: "http://fillmurray.com/200/200",
+            photo_url: "https://i.imgur.com/vSnDyGZ.jpg",
             journal: sad
  })
 sadPost2Emotion = Emotion.create!({
