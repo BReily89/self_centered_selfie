@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 class JournalsList extends Component {
+    
     render() {
+        
         const {journals} = this.props
         return (
             <div>

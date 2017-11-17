@@ -1,5 +1,6 @@
 body {
   background-image: url(https://i.imgur.com/pwq3sVF.png);
+  
 }
 a{
   color: #fcfcfd;
@@ -13,10 +14,20 @@ h1{
 }
 textarea{
   background: transparent;
-  border: 1px solid #747578;
+  border: 1px solid #ffffff;
   width: 500px;
   height: 200px;
   font-size: 18px;
+}
+p{
+  font-family: 'Spectral SC';
+}
+label{
+  font-family: 'Spectral SC';
+  margin: auto;
+  text-shadow: 1px 1px rgb(243, 243, 243);
+  color: #8aff90
+
 }
 /* .App {
   text-align: center;

@@ -13,6 +13,7 @@
     "javascript-time-ago": "^0.4.10",
     "material": "^0.2.6",
     "material-ui": "^0.19.4",
+    "styled-components": "^2.2.3",
     "timeago.js": "^3.0.2",
     "ui": "^0.2.4"
   }

@@ -21,6 +21,7 @@ class Journals extends Component {
         this.setState({showNewForm: !this.state.showNewForm})
     }
     render() {
+         
 
         // console.log(this.state.journals);
         return (

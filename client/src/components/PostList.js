@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import NewPostForm from './NewPostForm'
 import axios from  'axios'
 import FlatButton from 'material-ui/FlatButton'
+import styled from 'styled-components'
 
 
 // import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
