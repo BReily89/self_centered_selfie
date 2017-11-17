@@ -17,3 +17,4 @@ I have created an application that allows you to post in journals your feeling f
 
 
 https://trello.com/b/qqYcQJzg/selfcenteredselfies
+
