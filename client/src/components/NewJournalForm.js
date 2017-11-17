@@ -34,11 +34,11 @@ class NewJournalForm extends Component {
             <New>
             <form onSubmit={this.handleSumbit}>
             <div>
-            <label htmlFor='name'>Name:</label>
+            <label htmlFor='name'>Mood:</label>
             <input onChange={this.handleChange} type='text' name='name' value={this.state.name}/>
             </div>
             <div>
-            <label htmlFor='description'>description:</label>
+            <label htmlFor='description'>describe your mood:</label>
             <input onChange={this.handleChange} type='text' name='description' value={this.state.description}/>
             </div>
             <button>Save</button>

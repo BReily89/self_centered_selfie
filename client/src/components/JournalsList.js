@@ -36,6 +36,7 @@ class JournalsList extends Component {
                         
                         style={{backgroundColor: "720FF",
                         margin: "5px"}}/>
+                        </div>
                         </Container>
                     
                     })

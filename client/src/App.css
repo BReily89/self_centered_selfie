@@ -2,18 +2,18 @@ body {
   background-image: url(https://i.imgur.com/dSS9NGM.png);
 }
 a{
-  color: #fcfcfd;
+  color: #000007;
   text-shadow: 1px 1px #a80f91;
 }
 h1{
   font-family: 'Spectral SC';
   margin: auto;
   text-shadow: 1px 1px rgb(196, 13, 13);
-  color: #430146 
+  color: #540358 
 }
 textarea{
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid #330101;
   width: 500px;
   height: 200px;
   font-size: 18px;
@@ -25,7 +25,7 @@ label{
   font-family: 'Spectral SC';
   margin: auto;
   text-shadow: 1px 1px rgb(243, 243, 243);
-  color: #8aff90
+  color: #000801
 }
 
 /* .App {

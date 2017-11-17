@@ -11,7 +11,7 @@ class Posts extends Component {
     state = {
         posts: {},
         emotion:{},
-        redirectToJournals: false
+        redirectToJournals: true
     }
     handleChange = (event) => {
         const name =event.target.name
@@ -27,7 +27,7 @@ class Posts extends Component {
 
             const response = await axios.get(`/api/journals${journalId}/posts/${postsId}`)
             console.table(response.data)
-            this.setState({post: response.data})
+            this.setState({posts: response.data})
         }catch (error){
             console.log(error)
         }
@@ -45,14 +45,14 @@ class Posts extends Component {
     render() {
         const journalId = this.props.match.params.journalId
         const postId = this.props.match.params.postId
-        const emotionId = this.props.match.prarams.emotionId
+        // const emotionId = this.props.match.prarams.emotionId
 
         if (this.state.redirectToJournals){
             return (
             
             <Card>
                 <CardHeader
-                title={this.state.post.title}
+                title={this.state.posts.title}
                 subtitle={timeago}
                  />
                  <CardText expandable={false}>
