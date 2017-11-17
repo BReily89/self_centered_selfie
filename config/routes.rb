@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  namespace :api do
+    get 'emotion/index'
+  end
   namespace :api do
     get 'emotion/show'
   end

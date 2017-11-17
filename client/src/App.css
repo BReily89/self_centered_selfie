@@ -1,6 +1,23 @@
 body {
   background-image: url(https://i.imgur.com/pwq3sVF.png);
 }
+a{
+  color: #fcfcfd;
+  text-shadow: 1px 1px #e0afd8;
+}
+h1{
+  font-family: 'Spectral SC';
+  margin: auto;
+  text-shadow: 1px 1px #72E0FF;
+  color: #747578
+}
+textarea{
+  background: transparent;
+  border: 1px solid #747578;
+  width: 500px;
+  height: 200px;
+  font-size: 18px;
+}
 /* .App {
   text-align: center;
 }

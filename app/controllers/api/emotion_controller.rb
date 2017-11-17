@@ -1,4 +1,8 @@
 class Api::EmotionController < ApplicationController
+  def index
+    @emotions = Emotion.all
+  end
+  
   def show
     @emotions = Posts.find(params[:post_id])
     puts @emotions

@@ -28,7 +28,7 @@ class Api::PostsController < ApplicationController
         render json: @posts
         # render status: :ok
     end
-    # private
+    private
     def post_params
         params.require(:post).permit(:title, :content, :photo_url)
     end
