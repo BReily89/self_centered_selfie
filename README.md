@@ -1,25 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # self_centered_selfie
+
+Technologies used
+Ruby
+Rails
+React
+JavaScript
+CSS
+I have created an application that allows you to post in journals your feeling for each day with an attached selfie. I used an external Face API to return a computers reading of your face that shows the emotions that reads on your face.
+
+
+
+
+
+
+https://trello.com/b/qqYcQJzg/selfcenteredselfies
