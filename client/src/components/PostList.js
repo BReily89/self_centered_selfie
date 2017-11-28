@@ -56,12 +56,6 @@ class PostList extends Component {
         console.log(this.props.posts)
         console.log(this.props.journalId)
     }
-
-    // getAllPosts = async () => {
-    //     const res = await axios.get(`/api/posts`)
-    //     console.log(res)
-    //         this.setState({posts: res.data})
-    // }
     toggleShowNewForm = () => {
         this.setState({showNewForm: !this.state.showNewForm})
     }

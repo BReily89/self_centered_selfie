@@ -20,7 +20,7 @@ class Journals extends Component {
         showNewForm: false
     }
     componentWillMount () {
-        console.log('fuck right')
+        console.log('right here')
         this.getAllJournals()
     }
     getAllJournals = async () => {
