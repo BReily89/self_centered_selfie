@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return ( <MuiThemeProvider>
       <Router>
-        <div classname ="App">
+        <div className ="App">
         <div>
           <Switch>
             <Route exact path="/" component={Journals}/>

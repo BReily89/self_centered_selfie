@@ -1,5 +1,6 @@
 body {
   background-image: url(https://i.imgur.com/dSS9NGM.png);
+  align-items: center;
 }
 a{
   color: #000007;
@@ -26,4 +27,8 @@ label{
   margin: auto;
   text-shadow: 1px 1px rgb(5, 0, 0);
   color: #000801
+}
+.App {
+  display: flex;
+  justify-content: space-around;
 }

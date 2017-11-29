@@ -14,14 +14,11 @@ align-content: center;
 `
 
 
-// import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card'
-// import timeago from 'timeago.js'
-
 const PostListStyle = styled.div`
 display: flex;
 margin: 0.5rem;
 padding: 1rem;
-align:center;
+align-content: center;
 `
 class PostList extends Component {
     state = {
